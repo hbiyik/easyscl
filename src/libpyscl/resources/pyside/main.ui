@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>787</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PySCL</string>
+  </property>
+  <widget class="QWidget" name="widget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Node View</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="1">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="tbw_attr"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="trw_nodes">
+          <column>
+           <property name="text">
+            <string>SCL</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignRight">
+     <widget class="QComboBox" name="cb_loglvl">
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Logging Level&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Debug</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Info</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Warning</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Error</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Critical</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPlainTextEdit" name="pte_status">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>787</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="a_open"/>
+    <addaction name="a_save"/>
+    <addaction name="a_saveas"/>
+    <addaction name="a_close"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="a_about"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="a_clean"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="a_open">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="a_save">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="a_close">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="a_about">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="a_saveas">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="a_clean">
+   <property name="text">
+    <string>Clean</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
